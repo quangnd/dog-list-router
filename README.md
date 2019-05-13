@@ -1,6 +1,6 @@
 # Dog list 🐕
 
-Just for fun. See demo at: [Card Dealer by Mun](https://nervous-goodall-0f4817.netlify.com/)
+Transition is with React router. See demo at: [Doglist by Mun](https://flamboyant-raman-357e00.netlify.com)
 
 ## Features
 
