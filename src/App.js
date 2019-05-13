@@ -1,13 +1,10 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./Navbar";
-import { Route, Switch, Link } from "react-router-dom";
-import DogList from "./DogList";
-import DogDetail from "./DogDetail";
+import Routes from './Routes';
 import hazel from "./images/hazel.jpg";
 import tubby from "./images/tubby.jpg";
 import whiskey from "./images/whiskey.jpg";
-
 class App extends React.Component {
   static defaultProps = {
     dogs: [
@@ -44,26 +41,10 @@ class App extends React.Component {
     ]
   };
   render() {
-    const getDog = props => {
-      console.log('in get Dog')
-      const name = props.match.params.name;
-      const currentDog = this.props.dogs.find(
-        dog => dog.name.toLowerCase() === name.toLowerCase()
-      );
-      return <DogDetail {...props} dog={currentDog} />;
-    };
     return (
       <div className="App">
         <Navbar dogs={this.props.dogs} />
-        <h1>Dog list</h1>
-        <Switch>
-          <Route
-            exact
-            path="/dogs"
-            render={() => <DogList dogs={this.props.dogs} />}
-          />
-          <Route exact path="/dogs/:name" render={getDog} />
-        </Switch>
+        <Routes dogs={this.props.dogs} />
       </div>
     );
   }
