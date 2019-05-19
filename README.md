@@ -9,6 +9,7 @@ Transition is with React router. See demo at: [Doglist by Mun](https://flamboyan
 - [x] Navbar to see dog detail.
 - [x] Bootstrap framework.
 - [x] React router.
+- [ ] Testing.
 
 ## Screenshots
 
